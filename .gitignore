@@ -1,0 +1,71 @@
+# === Keep (Rice-related) ===
+# hyprland, waybar, swayosd, omarchy, ghostty, alacritty, kitty, mako, fastfetch, eza, starship
+# These define your appearance, bar, terminal, notifications, fonts, etc.
+!alacritty/
+ghostty/
+kitty/
+!mako/
+swayosd/
+!starship.toml
+fastfetch/
+eza/
+
+# === Ignore everything else by default ===
+
+
+# === Then un-ignore the essentials for git itself ===
+!.gitignore
+!.git/
+
+# === Ignore sensitive, cache-heavy, or unrelated configs ===
+BraveSoftware/
+brave-flags.conf
+chromium/
+chromium-flags.conf
+Code/
+composer/
+Cursor/
+dconf/
+Electron/
+fcitx*/
+fontconfig/
+gtk-3.0/
+gtk-4.0/
+ibus/
+libreoffice/
+mimeapps.list
+mise/
+nautilus/
+obsidian/
+Pinta/
+pulse/
+qalculate/
+retroarch/
+Signal/
+systemd/
+touchegg/
+Typora/
+uwsm/
+walker/
+xournalpp/
+yay/
+nvim/
+lazygit/
+git/
+btop/
+user-dirs.*
+environment.d/
+
+# === Ignore random files ===
+*.log
+*.bak
+*.tmp
+*.lock
+*.cache
+*.old
+*.swp
+*.swo
+*.ttf
+.DS_Store
+Thumbs.db
+starship.toml
