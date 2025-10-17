@@ -1,73 +1,208 @@
-@import "../omarchy/current/theme/waybar.css";
-
+/* Waybar Hyperland Arch Theme */
 * {
-  background-color: @background;
-  color: @foreground;
-  border: none;
-  border-radius: 0;
-  min-height: 0;
-  font-family: CaskaydiaMono Nerd Font;
-  font-size: 12px;
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrains Mono Nerd Font", "Iosevka Nerd Font", "FiraCode Nerd Font", monospace;
+    font-weight: bold;
+    font-size: 11px;
+    min-height: 0;
 }
 
-.modules-left {
-  margin-left: 8px;
+window#waybar {
+    background: rgba(51, 0, 80, 0);
+    color: #e5e5e5;
 }
 
-.modules-right {
-  margin-right: 8px;
+/* Modules left */
+#custom-omarchy {
+    background-color: rgba(30, 30, 30, 0);
+    color: #9651fe;
+    border: #8b5cf6;
+    padding: 0px 12px;
+    margin: 2px 0 2px 4px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+#workspaces {
+    background: rgba(0, 0, 0, 0.423);
+    margin: 2px 4px;
+    color: #ffffff;
+    border-radius: 6px;
 }
 
 #workspaces button {
-  all: initial;
-  padding: 0 6px;
-  margin: 0 1.5px;
-  min-width: 9px;
+    color: #ffffff;
+    padding: 0 8px;
+    margin: 2px 1px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
-#workspaces button.empty {
-  opacity: 0.5;
+#workspaces button:hover {
+    background: rgba(59, 130, 246, 0.3);
+    color: #93c5fd;
 }
 
-#tray,
-#cpu,
-#battery,
-#network,
-#bluetooth,
-#pulseaudio,
-#custom-omarchy,
-#custom-screenrecording-indicator,
-#custom-update {
-  min-width: 12px;
-  margin: 0 7.5px;
+#workspaces button.active {
+    background-color: #8b5cf6;
+    color: #ffffff;
 }
 
-#custom-expand-icon {
-  margin-right: 7px;
-}
-
-tooltip {
-  padding: 2px;
-}
-
-#custom-update {
-  font-size: 10px;
-}
-
+/* Modules center */
 #clock {
-  margin-left: 8.75px;
+    background: rgba(0, 0, 0, 0.748);
+    color: #e5e5e5;
+    font-size: medium;
+    padding: 0 12px;
+    margin: 2px 4px;
+    border-radius: 6px;
 }
 
-.hidden {
-  opacity: 0;
+#custom-update {
+    background: rgba(0, 0, 0, 0.500);
+    color: #f59e0b;
+    padding: 0 12px;
+    margin: 2px 4px;
+    border-radius: 6px;
+    border: 1px solid rgba(245, 158, 11, 0.3);
 }
 
 #custom-screenrecording-indicator {
-  min-width: 12px;
-  margin-left: 8.75px;
-  font-size: 10px;
+    background: rgba(220, 38, 38, 0.9);
+    color: #ffffff;
+    padding: 0 12px;
+    margin: 2px 4px;
+    border-radius: 6px;
+    font-weight: bold;
 }
 
-#custom-screenrecording-indicator.active {
-  color: #a55555;
+
+
+/* Modules right */
+#tray {
+    background: rgba(0, 0, 0, 0.500);
+    color: #ffffff;
+    padding: 0 8px;
+    margin: 2px 4px;
+    font-size: 15px;
+    border-radius: 6px;
+}
+
+#bluetooth {
+    background: rgb(0, 51, 255);
+    color: #ffffff;
+    padding: 0 12px;
+    font-size: 14px;
+    margin: 2px 4px;
+    border-radius: 6px;
+}
+
+#bluetooth.connected {
+    color: #ffffff;
+    background: rgba(37, 99, 235, 0.2);
+}
+
+#network {
+    background: rgb(35, 125, 96);
+    color: #ffffff;
+    padding: 0 12px;
+    margin: 2px 4px;
+    font-size: 12px;
+    border-radius: 6px;
+}
+
+#network.disconnected {
+    color: #6b7280;
+    background: rgba(100, 100, 100, 0.2);
+}
+
+#pulseaudio {
+    background: rgb(1, 68, 80);
+    color: #ffffff;
+    padding: 0 12px;
+    margin: 2px 4px;
+    border-radius: 6px;
+}
+
+#pulseaudio.muted {
+    color: #030303;
+    background: rgb(255, 0, 0);
+}
+
+#cpu {
+    background: rgb(213, 164, 252);
+    color: #000000;
+    padding: 0 12px;
+    margin: 2px 4px;
+    font-size: 15px;
+    border-radius: 6px;
+}
+
+#battery {
+    background: rgb(0, 150, 50);
+    color: #ffffff;
+    padding: 0 12px;
+    margin: 2px 4px 2px 2px;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+#battery.warning {
+    color: #f59e0b;
+    background: rgba(245, 158, 11, 0.2);
+}
+
+#battery.critical {
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.2);
+}
+
+#battery.plugged {
+    color: #3b82f6;
+    background: rgba(59, 130, 246, 0.2);
+}
+
+/* Tray expander */
+#custom-expand-icon {
+    background: rgba(0, 0, 0, 0.595);
+    color: #ffffff;
+    padding: 0 8px;
+    margin: 2px 0 2px 4px;
+    border-radius: 6px;
+}
+
+/* Tooltips */
+tooltip {
+    background: rgba(10, 10, 10, 0.95);
+    border: 1px solid rgba(59, 130, 246, 0.5);
+    border-radius: 8px;
+    color: #e5e5e5;
+}
+
+tooltip label {
+    color: #e5e5e5;
+}
+
+/* Animation for updates */
+@keyframes blink {
+    to {
+        background-color: rgba(245, 158, 11, 0.5);
+        color: #ffffff;
+    }
+}
+
+#custom-update.updates-available {
+    animation: blink 1s infinite alternate;
+}
+
+/* Animation for recording */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+#custom-screenrecording-indicator.recording {
+    animation: pulse 2s infinite;
 }

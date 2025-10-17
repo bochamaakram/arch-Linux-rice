@@ -120,7 +120,7 @@
   },
   "custom/expand-icon": {
     "format": " ",
-    "tooltip": false
+    "tooltip": true
   },
   "custom/screenrecording-indicator": {
     "on-click": "omarchy-cmd-screenrecord",
